@@ -23,7 +23,7 @@ class Usuario extends Model
         $this->where('contraseña', $data['pass']);
 
         $query = $this->get(1);
-
+        // edit on web
         if ($query->getResult())
             return $query->getResult();
         else
