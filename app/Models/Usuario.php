@@ -21,7 +21,9 @@ class Usuario extends Model
     {
         $this->where('username', $data['username']);
         $this->where('contraseña', $data['pass']);
+
         $query = $this->get(1);
+
         if ($query->getResult())
             return $query->getResult();
         else
